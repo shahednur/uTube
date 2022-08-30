@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import react from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { Box } from '@mui/material';
 
 import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './components';
@@ -6,7 +11,7 @@ import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './componen
 
 function App() {
   return (
-      <BrowserRouter>
+      <Router>
         <Box sx={{ backgroundColor: '#000'}}>
           <Navbar />
           <Routes>
@@ -16,7 +21,7 @@ function App() {
             <Route exact path="/search/:searchTerm" element={<SearchFeed />} />
           </Routes>
         </Box>
-      </BrowserRouter>
+      </Router>
   );
 }
 
